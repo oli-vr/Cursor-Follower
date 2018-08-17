@@ -1,0 +1,10 @@
+
+
+#mouse-point {
+  	width: 20px;
+  	height: 20px;
+  	position: absolute;
+  	border-radius: 50%;
+  	background: #000;
+  	z-index: 10000; 
+}
