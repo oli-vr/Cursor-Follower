@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var pointer = new Point(
 		{  
 			size: 'medium',
-			color: 'green'
+			color: 'red'
 		});
 
 	pointer.getAttributes();
