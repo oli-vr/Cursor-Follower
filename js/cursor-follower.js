@@ -1,19 +1,19 @@
 /**
- * Mouse Point.
+ * Cursor Follower
  *
- * Mouse Point script to draw a point that will follow the mouse trought the screen.
+ * Cursor Follower script to draw a point that will follow the mouse trought the screen.
  * When the mouse hovers by a link it will increase the size and decrease when leaving a link.
- * the size and the color can be edited.
+ * The size and the color can be edited.
  *
  *
  * @link 	
- * @file mouse-point.js 
+ * @file cursor-follower.js 
  * @author Oliver Valido
- * @since 1.1.0
+ * @since 1.2.0
  */
 
 
-var Point = function(options) {
+var CursorFollower = function(options) {
 	/**
 	 * Define Root
 	 * @type {Reference}
@@ -207,12 +207,12 @@ var Point = function(options) {
 	};
 
 	/**
-	 * Initialize the mouse pointer on the mouse-poin container
+	 * Initialize the Cursor Follower on the cursor-follower container
 	 * @return {void} 
 	 */
 	this.init = function () {		
 		$body = $('body');
-		$point = $('#mouse-point');
+		$point = $('#cursor-follower');
 		delay = 100;
 		growing = true;
 
@@ -238,7 +238,7 @@ var Point = function(options) {
 		// Set the mouseover event
 		$body.mouseover(function (event) {
 			$target = $(event.target)
-			
+			// Start growing if the target is a link
 			if ($target.is('a')) {
 				growing = true;
 				startGrowPoint();
